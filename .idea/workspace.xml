@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59d1d349-643b-4ce0-801a-ed714345083c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/day01/PuzzleTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/day01/PuzzleTwoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day02/PuzzleOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day02/objects/Present.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/day02/PuzzleOneTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/day01/PuzzleOneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/day01/PuzzleOneTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -27,20 +26,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/day01/PuzzleOne.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/day02/PuzzleOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="544">
+              <caret line="32" column="83" lean-forward="true" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/day01/PuzzleOneTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/day02/PuzzleOneTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="513">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/day02/objects/Present.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/day01/PuzzleTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -93,6 +104,10 @@
         <option value="$PROJECT_DIR$/src/main/java/day01/PuzzleTwo.java" />
         <option value="$PROJECT_DIR$/src/test/java/day01/PuzzleTwoTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/day02/Present.java" />
+        <option value="$PROJECT_DIR$/src/main/java/day02/objects/Present.java" />
+        <option value="$PROJECT_DIR$/src/main/java/day02/PuzzleOne.java" />
+        <option value="$PROJECT_DIR$/src/test/java/day02/PuzzleOneTest.java" />
       </list>
     </option>
   </component>
@@ -160,7 +175,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="day02" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adventofcode2015" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adventofcode2015" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="day02" type="462c0819:PsiDirectoryNode" />
+              <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adventofcode2015" type="b2602c69:ProjectViewProjectNode" />
@@ -182,6 +206,14 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="day01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adventofcode2015" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adventofcode2015" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="day02" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +222,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564432238417" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564520769519" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -200,6 +232,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="day05" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="day02" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -214,7 +249,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PuzzleTwoTest">
+  <component name="RunManager" selected="JUnit.PuzzleOneTest.getPresentFromStringTest">
     <configuration name="PuzzleOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventofcode2015" />
       <extension name="coverage">
@@ -229,17 +264,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PuzzleOneTest.getFloorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PuzzleOneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adventofcode2015" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="day01.*" />
+          <option name="PATTERN" value="day02.objects.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="day01" />
-      <option name="MAIN_CLASS_NAME" value="day01.PuzzleOneTest" />
-      <option name="METHOD_NAME" value="getFloorTest" />
+      <option name="PACKAGE_NAME" value="day02" />
+      <option name="MAIN_CLASS_NAME" value="day02.PuzzleOneTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PuzzleOneTest.getPresentFromStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="adventofcode2015" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="day02" />
+      <option name="MAIN_CLASS_NAME" value="day02.PuzzleOneTest" />
+      <option name="METHOD_NAME" value="getPresentFromStringTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -275,29 +324,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="day05_02_tests.testOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="adventofcode2015" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day05.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="day05" />
-      <option name="MAIN_CLASS_NAME" value="day05.day05_02_tests" />
-      <option name="METHOD_NAME" value="testOne" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PuzzleOneTest.getPresentFromStringTest" />
+        <item itemvalue="JUnit.PuzzleOneTest (1)" />
         <item itemvalue="JUnit.PuzzleTwoTest" />
         <item itemvalue="JUnit.PuzzleOneTest" />
         <item itemvalue="JUnit.PuzzleOneTest.getPuzzleAnswer" />
-        <item itemvalue="JUnit.PuzzleOneTest.getFloorTest" />
-        <item itemvalue="JUnit.day05_02_tests.testOne" />
       </list>
     </recent_temporary>
   </component>
@@ -315,21 +348,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="day01_01_test_directionTest - 2019.07.29 at 21h 10m 01s.xml">
-      <configuration name="day01_01_test.directionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleOneTest_directionTest - 2019.07.29 at 21h 13m 03s.xml">
-      <configuration name="PuzzleOneTest.directionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleOneTest_directionTest - 2019.07.29 at 21h 16m 50s.xml">
-      <configuration name="PuzzleOneTest.directionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleOneTest_getPuzzleAnswer - 2019.07.29 at 21h 20m 56s.xml">
-      <configuration name="PuzzleOneTest.getPuzzleAnswer" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleOneTest - 2019.07.29 at 21h 21m 07s.xml">
-      <configuration name="PuzzleOneTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PuzzleOneTest - 2019.07.29 at 21h 22m 48s.xml">
       <configuration name="PuzzleOneTest" configurationId="JUnit" />
     </history-entry>
@@ -345,11 +363,26 @@
     <history-entry file="PuzzleTwoTest - 2019.07.29 at 21h 47m 43s.xml">
       <configuration name="PuzzleTwoTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PuzzleOneTest_(1) - 2019.07.30 at 22h 27m 49s.xml">
+      <configuration name="PuzzleOneTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleOneTest_getPresentFromStringTest - 2019.07.30 at 23h 00m 26s.xml">
+      <configuration name="PuzzleOneTest.getPresentFromStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleOneTest - 2019.07.30 at 23h 01m 09s.xml">
+      <configuration name="PuzzleOneTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleOneTest_getPresentFromStringTest - 2019.07.30 at 23h 03m 23s.xml">
+      <configuration name="PuzzleOneTest.getPresentFromStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleOneTest_getPresentFromStringTest - 2019.07.30 at 23h 04m 02s.xml">
+      <configuration name="PuzzleOneTest.getPresentFromStringTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="1932" height="1407" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25267094" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -360,12 +393,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786323" weight="0.32967034" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49946582" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49893162" visible="true" weight="0.23861852" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49893162" weight="0.23861852" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106835" side_tool="true" weight="0.23861852" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49732906" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -380,48 +413,29 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/day05.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/day05/day05_02.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/day05/day05_02.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/day05/day05_02_tests.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/day05/day05_02_tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/day01/PuzzleOneTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="153">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/day01/PuzzleTwo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/day01/PuzzleOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -435,10 +449,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/day01/PuzzleTwo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/day02/objects/Present.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/day02/PuzzleOneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/day02/PuzzleOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="83" lean-forward="true" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
         </state>
       </provider>
     </entry>
