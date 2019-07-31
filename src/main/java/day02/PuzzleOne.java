@@ -2,7 +2,6 @@ package day02;
 
 import day02.objects.Present;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PuzzleOne {
