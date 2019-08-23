@@ -14,11 +14,10 @@ public class PuzzleTwo {
         Location santaLocation = new Location(0, 0);
         Location robotLocation = new Location(0, 0);
 
-        Map<Location, Integer> santaGrid = new HashMap<>();
-        Map<Location, Integer> robotGrid = new HashMap<>();
+        Map<Location, Integer> grid = new HashMap<>();
 
-        santaGrid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), 1);
-        robotGrid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), 1);
+        grid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), 1);
+        grid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), 1);
 
         int count = 0;
 
@@ -29,15 +28,15 @@ public class PuzzleTwo {
 
                 updateCurrentLocation(santaLocation, c);
 
-                if (santaGrid.containsValue(santaLocation)) {
+                if (grid.containsValue(santaLocation)) {
 
-                    int value = santaGrid.get(santaLocation);
+                    int value = grid.get(santaLocation);
 
-                    santaGrid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), value + 1);
+                    grid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), value + 1);
 
                 } else {
 
-                    santaGrid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), 1);
+                    grid.put(new Location(santaLocation.getVertical(), santaLocation.getHorizontal()), 1);
 
                 }
 
@@ -48,25 +47,25 @@ public class PuzzleTwo {
 
                 updateCurrentLocation(robotLocation, c);
 
-                if (robotGrid.containsValue(robotLocation)) {
+                if (grid.containsValue(robotLocation)) {
 
-                    int value = robotGrid.get(robotLocation);
+                    int value = grid.get(robotLocation);
 
-                    robotGrid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), value + 1);
+                    grid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), value + 1);
 
                 } else {
 
-                    robotGrid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), 1);
+                    grid.put(new Location(robotLocation.getVertical(), robotLocation.getHorizontal()), 1);
 
                 }
 
             }
 
+            count++;
+
         }
 
-        count++;
-
-        return santaGrid.size() + robotGrid.size();
+        return grid.size();
 
     }
 
