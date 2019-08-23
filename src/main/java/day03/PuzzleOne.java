@@ -7,38 +7,35 @@ import java.util.Map;
 
 public class PuzzleOne {
 
-    private int count;
-
     public int getHousesDelivered(String instruction) {
 
         Location currentLocation = new Location(0, 0);
         Map<Location, Integer> grid = new HashMap<>();
-        grid.put(currentLocation, 1);
+        grid.put(new Location(currentLocation.getVertical(), currentLocation.getHorizontal()), 1);
 
         for (char c : instruction.toCharArray()) {
 
-            Location updatedLocation = getUpdatedLocation(currentLocation, c);
+            updateCurrentLocation(currentLocation, c);
 
-            //todo: create function to add to the grid
             if (grid.containsValue(currentLocation)) {
 
-                grid.put(currentLocation, grid.get(currentLocation) + 1);
+                int value = grid.get(currentLocation);
+
+                grid.put(new Location(currentLocation.getVertical(), currentLocation.getHorizontal()), value + 1);
 
             } else {
 
-                grid.put(currentLocation, 1);
+                grid.put(new Location(currentLocation.getVertical(), currentLocation.getHorizontal()), 1);
 
             }
 
         }
 
-        grid.forEach((key, value) -> { if (value > 0) { count++; }});
-
-        return count;
+        return grid.size();
 
     }
 
-    public Location getUpdatedLocation(Location currentLocation, char c) {
+    public void updateCurrentLocation(Location currentLocation, char c) {
 
         switch(c) {
 
@@ -59,8 +56,6 @@ public class PuzzleOne {
                 break;
 
         }
-
-        return currentLocation;
 
     }
 
