@@ -6,7 +6,7 @@ public class PuzzleOne {
 
     public static final String VOWELS = "aeiou";
     public static final int MIN_AMOUNT_OF_VOWELS = 3;
-    public static final boolean LOGGING = true;
+    public static final boolean LOGGING = false;
 
     public int getNumberOfNiceStrings(String input) {
 
@@ -36,7 +36,7 @@ public class PuzzleOne {
 
         if (LOGGING) {
 
-            System.out.println(getTime() + " - Log: " + input + " contains " + count + " vowels.");
+            System.out.println(getTime() + " - Log: " + input + " contains " + count + " vowel(s).");
 
         }
 
@@ -46,13 +46,73 @@ public class PuzzleOne {
 
     public boolean containsOneLetterTwiceInRow(String input) {
 
-        // generieke functie voor search string.tochararray voor patroon? of paartjes voor deze twee? en char override voor eerste?
+        char previousChar = Character.MIN_VALUE;
+
+        for (char c : input.toCharArray()) {
+
+            if (c == previousChar) {
+
+                if (LOGGING) {
+
+                    System.out.println(getTime() + " - Log: " + input + " contains the same letter twice in a row: " + previousChar + c);
+
+                }
+
+                return true;
+
+            }
+
+            previousChar = c;
+
+        }
+
+        if (LOGGING) {
+
+            System.out.println(getTime() + " - Log: " + input + " does not contain the same letter in a row twice");
+
+        }
 
         return false;
 
     }
 
-    // pair-by-pair twice in a row
-    // pair-by-pair disallowed substrings
+    public boolean containsDisallowedSubstrings(String input) {
 
+        char previousChar = Character.MIN_VALUE;
+
+        for (char c : input.toCharArray()) {
+
+            String string = "" + previousChar + c;
+
+            if (string.matches("ab|cd|pq|xy")) {
+
+                if (LOGGING) {
+
+                    System.out.println(getTime() + " - Log: " + input + " contains the disallowed substring " + string);
+
+                }
+
+                return true;
+
+            }
+
+            previousChar = c;
+
+        }
+
+        if (LOGGING) {
+
+            System.out.println(getTime() + " - Log: " + input + " does not contain a disallowed substring");
+
+        }
+
+        return false;
+
+    }
+
+    public boolean isThisStringNice(String input) {
+
+        return (containsThreeVowels(input) && containsOneLetterTwiceInRow(input) && !containsDisallowedSubstrings(input));
+
+    }
 }

@@ -1,6 +1,9 @@
 package day05;
 
+import genericFunctions.GenericFunctions;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -9,25 +12,25 @@ public class PuzzleOneTest {
     @Test
     public void getPuzzleAnswer() {
 
-        // todo
+        //get input
+        ArrayList<String> list = GenericFunctions.getInputFromFile("C:\\Users\\Marcel\\IdeaProjects\\adventofcode2015\\src\\main\\java\\day05\\objects\\input");
 
-        String input = "";
-        String answer = "";
-
-        System.out.println("Answer: " + answer);
-
-    }
-
-    @Test
-    public void getNumberOfNiceStringsTest() {
-
+        //do stuff
         PuzzleOne puzzle = new PuzzleOne();
 
-        assertEquals(1, puzzle.getNumberOfNiceStrings("ugknbfddgicrmopn"));
-        assertEquals(1, puzzle.getNumberOfNiceStrings("aaa"));
-        assertEquals(0, puzzle.getNumberOfNiceStrings("jchzalrnumimnmhp"));
-        assertEquals(0, puzzle.getNumberOfNiceStrings("haegwjzuvuyypxyu"));
-        assertEquals(0, puzzle.getNumberOfNiceStrings("dvszwmarrgswjxmb"));
+        int count = 0;
+
+        for (String string : list) {
+
+            if (puzzle.isThisStringNice(string)) {
+
+                count++;
+
+            }
+
+        }
+
+        System.out.println(count);
 
     }
 
@@ -52,6 +55,32 @@ public class PuzzleOneTest {
         assertEquals(true, puzzle.containsOneLetterTwiceInRow("abcdde"));
         assertEquals(true, puzzle.containsOneLetterTwiceInRow("aabbccdd"));
         assertEquals(false, puzzle.containsOneLetterTwiceInRow("test"));
+
+    }
+
+    @Test
+    public void containsDisallowedSubstringsTest() {
+
+        PuzzleOne puzzle = new PuzzleOne();
+
+        assertEquals(true, puzzle.containsDisallowedSubstrings("ab"));
+        assertEquals(true, puzzle.containsDisallowedSubstrings("cd"));
+        assertEquals(true, puzzle.containsDisallowedSubstrings("pq"));
+        assertEquals(true, puzzle.containsDisallowedSubstrings("xy"));
+        assertEquals(false, puzzle.containsDisallowedSubstrings("test"));
+
+    }
+
+    @Test
+    public void isThisStringNiceTest() {
+
+        PuzzleOne puzzle = new PuzzleOne();
+
+        assertEquals(true, puzzle.isThisStringNice("ugknbfddgicrmopn"));
+        assertEquals(true, puzzle.isThisStringNice("aaa"));
+        assertEquals(false, puzzle.isThisStringNice("jchzalrnumimnmhp"));
+        assertEquals(false, puzzle.isThisStringNice("haegwjzuvuyypxyu"));
+        assertEquals(false, puzzle.isThisStringNice("dvszwmarrgswjxmb"));
 
     }
 
