@@ -2,10 +2,14 @@ package genericFunctions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class GenericFunctions {
+
+    public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("HH:mm:ss:SSS");
 
     public static ArrayList<String> getInputFromFile(String location) {
 
@@ -32,6 +36,12 @@ public class GenericFunctions {
         scanner.close();
 
         return list;
+
+    }
+
+    public static String getTime() {
+
+        return SIMPLE_DATE_FORMAT.format(Calendar.getInstance().getTime());
 
     }
 
