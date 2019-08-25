@@ -1,8 +1,32 @@
 package day06;
 
-public class PuzzleOne {
+public class PuzzleTwo {
 
-    public int[][] updateGrid(String instruction, int[][] grid) {
+    public int[][] getStartingGrid() {
+
+        int[][] grid = new int[1000][1000];
+
+        for (int i = 0; i < 1000; i++) {
+
+            for (int j = 0; j < 1000; j++) {
+
+                grid[i][j] = 0;
+
+            }
+
+        }
+
+        if (countTheGrid(grid) > 0) {
+
+            System.out.println("The grid was not initialized properly");
+
+        }
+
+        return grid;
+
+    }
+
+    public int[][] increaseBrightness(int[][] grid, String instruction) {
 
         if (instruction.contains("turn on")) {
 
@@ -14,7 +38,7 @@ public class PuzzleOne {
 
                 for (int j = coordinates[1]; j <= coordinates[3]; j++) {
 
-                    grid[i][j] = 1;
+                    grid[i][j] = grid[i][j] + 1;
 
                 }
 
@@ -32,7 +56,11 @@ public class PuzzleOne {
 
                 for (int j = coordinates[1]; j <= coordinates[3]; j++) {
 
-                    grid[i][j] = 0;
+                    if (grid[i][j] > 0) {
+
+                        grid[i][j] -= 1;
+
+                    }
 
                 }
 
@@ -50,15 +78,7 @@ public class PuzzleOne {
 
                 for (int j = coordinates[1]; j <= coordinates[3]; j++) {
 
-                    if (grid[i][j] == 1) {
-
-                        grid[i][j] = 0;
-
-                    } else {
-
-                        grid[i][j] = 1;
-
-                    }
+                    grid[i][j] += 2;
 
                 }
 
