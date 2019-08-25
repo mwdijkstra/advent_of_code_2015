@@ -4,6 +4,7 @@ import genericFunctions.GenericFunctions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,37 +19,41 @@ public class PuzzleTwoTest {
         assertEquals(true, puzzle.isThisStringNice("xxyxx"));
         assertEquals(false, puzzle.isThisStringNice("uurcxstgmygtbstg"));
         assertEquals(false, puzzle.isThisStringNice("ieodomkazucvgmuy"));
-        assertEquals(true, puzzle.isThisStringNice("rxexcbwhiywwwwnu"));
 
     }
 
     @Test
     public void containsPairTwiceTest() {
 
-        PuzzleTwo puzzle = new PuzzleTwo();
+        Pattern pattern = Pattern.compile("(..).*\\1");
 
-        assertEquals(true, puzzle.containsPairTwice("xyxy"));
-        assertEquals(true, puzzle.containsPairTwice("aabcdefgaa"));
-        assertEquals(false, puzzle.containsPairTwice("aaa"));
+        // from the examples
+        assertEquals(true, pattern.matcher("xyxy").find());
+        assertEquals(true, pattern.matcher("aabcdefgaa").find());
+        assertEquals(false, pattern.matcher("aaa").find());
+
+        // the one that I was missing in my previous non-regex implementation
+        assertEquals(true, pattern.matcher("rxexcbwhiywwwwnu").find());
 
     }
 
     @Test
     public void containsOneLetterBetweenRepeatTest() {
 
-        PuzzleTwo puzzle = new PuzzleTwo();
+        Pattern pattern = Pattern.compile("(.).\\1");
 
-        assertEquals(true, puzzle.containsOneLetterBetweenRepeat("xyx"));
-        assertEquals(true, puzzle.containsOneLetterBetweenRepeat("abcdefeghi"));
-        assertEquals(true, puzzle.containsOneLetterBetweenRepeat("aaa"));
-        assertEquals(false, puzzle.containsOneLetterBetweenRepeat("test"));
+        // from the examples
+        assertEquals(true, pattern.matcher("xyx").find());
+        assertEquals(true, pattern.matcher("abcdefeghi").find());
+        assertEquals(true, pattern.matcher("aaa").find());
+
+        // missing false example
+        assertEquals(false, pattern.matcher("test").find());
 
     }
 
     @Test
     public void getPuzzleAnswer() {
-
-        // todo - the answer is 51 but I still get 50
 
         //get input
         ArrayList<String> list = GenericFunctions.getInputFromFile("C:\\Users\\Marcel\\IdeaProjects\\adventofcode2015\\src\\main\\java\\day05\\objects\\input");
@@ -63,12 +68,6 @@ public class PuzzleTwoTest {
             if (puzzle.isThisStringNice(string)) {
 
                 count++;
-
-                //System.out.println(string);
-
-            } else {
-
-                //System.out.println(string + " is naughty");
 
             }
 
