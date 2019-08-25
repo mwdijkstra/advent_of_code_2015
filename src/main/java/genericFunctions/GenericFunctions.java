@@ -29,8 +29,8 @@ public class GenericFunctions {
         //put into a list
         ArrayList<String> list = new ArrayList<>();
 
-        while (scanner.hasNext()) {
-            list.add(scanner.next());
+        while (scanner.hasNextLine()) {
+            list.add(scanner.nextLine());
         }
 
         scanner.close();

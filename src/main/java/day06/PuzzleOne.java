@@ -73,25 +73,31 @@ public class PuzzleOne {
     public int[] getCoordinates(String instruction) {
 
         int[] coordinates = new int[4];
+        try {
+            coordinates[0] = Integer.parseInt(instruction
+                    .substring(0, instruction.indexOf(','))
+                    .replaceAll("[^0-9]", "")
+                    .trim());
 
-        coordinates[0] = Integer.parseInt(instruction
-                .substring(0, instruction.indexOf(','))
-                .replaceAll("[^0-9]", "")
-                .trim());
+            coordinates[1] = Integer.parseInt(instruction
+                    .substring(instruction.indexOf(','), instruction.indexOf("through"))
+                    .replaceAll("[^0-9]", "")
+                    .trim());
 
-        coordinates[1] = Integer.parseInt(instruction
-                .substring(instruction.indexOf(','), instruction.indexOf("through"))
-                .replaceAll("[^0-9]", "")
-                .trim());
+            coordinates[2] = Integer.parseInt(instruction.
+                    substring(instruction.indexOf("through") + 7, instruction.indexOf(",", instruction.indexOf(",") + 1))
+                    .trim());
 
-        coordinates[2] = Integer.parseInt(instruction.
-                substring(instruction.indexOf("through") + 7, instruction.indexOf(",", instruction.indexOf(",") + 1))
-                .trim());
+            coordinates[3] = Integer.parseInt(instruction.
+                    substring(instruction.indexOf(",", instruction.indexOf(",") + 1))
+                    .replaceAll("[^0-9]", "")
+                    .trim());
+        } catch (Exception e) {
 
-        coordinates[3] = Integer.parseInt(instruction.
-                substring(instruction.indexOf(",", instruction.indexOf(",") + 1))
-                .replaceAll("[^0-9]", "")
-                .trim());
+            System.out.println("Went wrong with instruction: " + instruction);
+            System.out.println("Coordinates: " + coordinates[0] + "," + coordinates[1] + " through " + coordinates[2] + "," +  coordinates[3]);
+
+        }
 
         return coordinates;
 
