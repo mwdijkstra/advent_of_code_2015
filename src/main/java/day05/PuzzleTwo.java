@@ -8,13 +8,11 @@ public class PuzzleTwo {
 
         // contains a pair of letters twice
         Pattern patternOne = Pattern.compile("(..).*\\1");
-        boolean ruleOne = patternOne.matcher(input).find();
 
         // contains one letter between repeat
         Pattern patternTwo = Pattern.compile("(.).\\1");
-        boolean ruleTwo = patternTwo.matcher(input).find();
 
-        return ruleOne && ruleTwo;
+        return patternOne.matcher(input).find() && patternTwo.matcher(input).find();
 
     }
 
