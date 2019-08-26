@@ -10,6 +10,8 @@ import java.util.Map;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.samePropertyValuesAs;
 
+//todo: ik check hier de inhoud niet
+
 public class PuzzleOneTest {
 
     @Test
@@ -31,6 +33,48 @@ public class PuzzleOneTest {
         expectedResult.put("y", 456);
 
         assertThat(expectedResult, samePropertyValuesAs(puzzle.getSignals(list)));
+
+    }
+
+    @Test
+    public void connectWiresTestX() {
+
+        PuzzleOne puzzle = new PuzzleOne();
+
+        Map<String, Integer> emptyInput = new HashMap<>();
+
+        Map<String, Integer> expectedResult = new HashMap<>();
+        expectedResult.put("x", 123);
+
+        assertThat(expectedResult, samePropertyValuesAs(puzzle.connectWires(emptyInput, "123 -> x")));
+
+    }
+
+    @Test
+    public void connectWiresTestY() {
+
+        PuzzleOne puzzle = new PuzzleOne();
+
+        Map<String, Integer> emptyInput = new HashMap<>();
+
+        Map<String, Integer> expectedResult = new HashMap<>();
+        expectedResult.put("y", 456);
+
+        assertThat(expectedResult, samePropertyValuesAs(puzzle.connectWires(emptyInput, "456 -> y")));
+
+    }
+
+    @Test
+    public void connectWiresToAndTest() {
+
+        PuzzleOne puzzle = new PuzzleOne();
+
+        Map<String, Integer> emptyInput = new HashMap<>();
+
+        Map<String, Integer> expectedResult = new HashMap<>();
+        expectedResult.put("d", 72);
+
+        assertThat(expectedResult, samePropertyValuesAs(puzzle.connectWiresToAnd(emptyInput, "x AND y -> d")));
 
     }
 
