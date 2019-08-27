@@ -6,7 +6,9 @@ import java.util.Map;
 
 public class PuzzleOne {
 
-    public static final boolean LOGGING = true;
+    public static final boolean LOGGING = false;
+
+    // todo: connectWiresToGate
 
     public Map<String, Integer> getSignals(ArrayList<String> circuit) {
 
@@ -14,26 +16,28 @@ public class PuzzleOne {
 
         for (String instruction : circuit) {
 
+            System.out.println(instruction);
+
             switch (instruction.replaceAll("[^A-Z]", "")) {
 
                 case "AND":
-                    // do something with AND
+                    resultingSignals = connectWiresToAnd(resultingSignals, instruction);
                     break;
 
                 case "OR":
-                    // do something with OR
+                    resultingSignals = connectWiresToOr(resultingSignals, instruction);
                     break;
 
                 case "RSHIFT":
-                    // do something with OR
+                    resultingSignals = connectWiresToRightShift(resultingSignals, instruction);
                     break;
 
                 case "LSHIFT":
-                    // do something with OR
+                    resultingSignals = connectWiresToLeftShift(resultingSignals, instruction);
                     break;
 
                 case "NOT":
-                    // do something with OR
+                    resultingSignals = connectWiresToNot(resultingSignals, instruction);
                     break;
 
                 default:
@@ -77,21 +81,97 @@ public class PuzzleOne {
         // x AND y -> z
 
         String key1 = instruction.substring(0, instruction.indexOf("AND")).trim();
-        String key2 = instruction.substring(instruction.indexOf("AND" + 3), instruction.indexOf("->")).trim();
-
-        System.out.println(key1);
-        System.out.println(key2);
+        String key2 = instruction.substring(instruction.indexOf("AND") + 3, instruction.indexOf("->")).trim();
 
         int x = 0;
         int y = 0;
 
         if (signals.containsKey(key1)) { x = signals.get(key1); }
-        if (signals.containsKey(key2)) { x = signals.get(key2); }
+        if (signals.containsKey(key2)) { y = signals.get(key2); }
 
         String z = instruction.substring(instruction.indexOf("->") + 2).trim();
-        System.out.println(z);
 
         signals.put(z,x&y);
+
+        return signals;
+
+    }
+
+    public Map<String, Integer> connectWiresToOr(Map<String, Integer> signals, String instruction) {
+
+        // x OR y -> z
+
+        String key1 = instruction.substring(0, instruction.indexOf("OR")).trim();
+        String key2 = instruction.substring(instruction.indexOf("OR") + 2, instruction.indexOf("->")).trim();
+
+        int x = 0;
+        int y = 0;
+
+        if (signals.containsKey(key1)) { x = signals.get(key1); }
+        if (signals.containsKey(key2)) { y = signals.get(key2); }
+
+        String z = instruction.substring(instruction.indexOf("->") + 2).trim();
+
+        signals.put(z,x|y);
+
+        return signals;
+
+    }
+
+    public Map<String, Integer> connectWiresToLeftShift(Map<String, Integer> signals, String instruction) {
+
+        // x LSHIFT y -> z
+
+        String key1 = instruction.substring(0, instruction.indexOf("LSHIFT")).trim();
+
+        int x = 0;
+        int y = Integer.parseInt(instruction.substring(instruction.indexOf("LSHIFT") + 6, instruction.indexOf("->")).trim());
+
+        if (signals.containsKey(key1)) { x = signals.get(key1); }
+
+        String z = instruction.substring(instruction.indexOf("->") + 2).trim();
+
+        signals.put(z,x<<y);
+
+        return signals;
+
+    }
+
+    public Map<String, Integer> connectWiresToRightShift(Map<String, Integer> signals, String instruction) {
+
+        // x RSHIFT y -> z
+
+        String key1 = instruction.substring(0, instruction.indexOf("RSHIFT")).trim();
+
+        int x = 0;
+        int y = Integer.parseInt(instruction.substring(instruction.indexOf("RSHIFT") + 6, instruction.indexOf("->")).trim());
+
+        if (signals.containsKey(key1)) { x = signals.get(key1); }
+
+        String z = instruction.substring(instruction.indexOf("->") + 2).trim();
+
+        signals.put(z,x>>y);
+
+        return signals;
+
+    }
+
+    public Map<String, Integer> connectWiresToNot(Map<String, Integer> signals, String instruction) {
+
+        // NOT a -> b
+
+        String key1 = instruction.substring(instruction.indexOf("NOT") + 3, instruction.indexOf("->")).trim();
+
+        int a = 0;
+
+        if (signals.containsKey(key1)) { a = signals.get(key1); }
+
+        System.out.println(a);
+
+        String b = instruction.substring(instruction.indexOf("->") + 2).trim();
+
+        //todo: waarom die 0xFFFF???
+        signals.put(b,~a & 0xFFFF);
 
         return signals;
 
